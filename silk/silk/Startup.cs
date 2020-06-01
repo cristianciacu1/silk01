@@ -34,6 +34,7 @@ namespace silk
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,7 +60,7 @@ namespace silk
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
-            {
+            {   
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

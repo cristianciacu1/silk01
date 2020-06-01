@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark box-shadow noMarginBottom">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><span style="color: #FACB0C">$</span>ilkresell</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -20,20 +20,24 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex">
                     <ul class="navbar-nav ml-auto">
                         <ul class="navbar-nav flex-grow-1">
-                            <li class="nav-item">
-                                <button type="button" class="btn btn-dark nav-link"><a class="text-light noHover" asp-area="" asp-controller="Home" asp-action="Index">Acasă</a></button>
+                            <li class="nav-item"> @* Search - trebuie bara d aia de cautare*@
+                                <a class="nav-link text-light noHover" asp-area = "Identity" asp-page = "/Account/Register" role="button">
+                                    <img src="~/Icons/search.png" alt="Cart" style="width: 22px; height: 22px" />
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <button type="button" class="btn btn-dark nav-link"><a class="text-light noHover" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></button>
+                                <a class="nav-link text-light noHover" asp-area="Identity" asp-page="/Account/Register" role="button">
+                                    <img src="~/Icons/supermarket.png" alt="Cart" style="width: 22px; height: 22px" />
+                                </a>
                             </li>
                         </ul>
-                        <partial name="_LoginPartial" />
+                        <partial name="_LoginPartial1" />
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div>
         <main role="main" class="pb-3">
             @RenderBody()
         </main>

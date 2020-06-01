@@ -14,6 +14,19 @@ a.text-dark.noHover:hover {
     color: #343a40 !important;
 }
 
+.noMarginBottom {
+    margin-bottom: 0 !important;
+}
+
+.dropdown-toggle::after{
+    display: none !important;
+}
+
+button.btn.btn-dark.butonCuMargini {
+    margin-bottom: 15px !important;
+    margin-top: 15px !important;
+}
+
 @media(min-width: 576px) {
     .btn-warning {
         margin-left: .7rem !important;
