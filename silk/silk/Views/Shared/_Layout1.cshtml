@@ -20,10 +20,24 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex">
                     <ul class="navbar-nav ml-auto">
                         <ul class="navbar-nav flex-grow-1">
-                            <li class="nav-item"> @* Search - trebuie bara d aia de cautare*@
-                                <a class="nav-link text-light noHover" asp-area = "Identity" asp-page = "/Account/Register" role="button">
+                            <li class="nav-item d-block d-sm-none">
+                                @* Sa se vada pe telefoane *@
+                                @* Search - trebuie bara d aia de cautare*@
+                                <a class="nav-link text-light noHover" asp-area="Identity" asp-page="/Account/Register" role="button">
                                     <img src="~/Icons/search.png" alt="Cart" style="width: 22px; height: 22px" />
                                 </a>
+                            </li>
+                            @* Sa nu se vada pe telefoane - sa se vada pe desktop*@
+                            @* Search - trebuie bara d aia de cautare*@
+                            <li class="nav-item d-none d-sm-block form-inline">
+                                <form class="form-inline" name="formPC" id="form1">
+                                    <a onclick="openSearch()" class="nav-link text-light noHover" role="button">
+                                        <img src="~/Icons/search.png" alt="Cart" style="width: 22px; height: 22px" />
+                                    </a>
+                                    <section class="d-none" id="sectiune1">
+                                        <input name="search" class="form-control mr-sm-2" style="background-color: #343a40" type="search" placeholder="Search" aria-label="Search">
+                                    </section>
+                                </form>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light noHover" asp-area="Identity" asp-page="/Account/Register" role="button">
@@ -51,6 +65,26 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        function openSearch() {
+            var element = document.getElementById("sectiune1");
+            var form = document.getElementById("form1");
+            element.style.transition = "all 2s";
+            var clasa = element.className;
+            if (clasa === "d-none") {
+                element.classList.remove("d-none");
+                element.classList.add("d-block");
+                form.classList.add("borderBottom");
+            }
+            else {
+                if (document.forms['formPC'].search.value === '') {
+                    element.classList.remove("d-block");
+                    element.classList.add("d-none");
+                    form.classList.remove("borderBottom");
+                }
+            }
+        }
+    </script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

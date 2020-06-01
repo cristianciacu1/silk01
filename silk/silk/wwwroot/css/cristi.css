@@ -18,8 +18,22 @@ a.text-dark.noHover:hover {
     margin-bottom: 0 !important;
 }
 
+a{
+    cursor: pointer !important;
+}
+
 .dropdown-toggle::after{
     display: none !important;
+}
+
+input.form-control {
+    background-color: #343a40 !important;
+    border: none !important;
+    color: #f8f9fa !important;
+}
+
+.borderBottom {
+    border-bottom: 1px solid #f8f9fa !important;
 }
 
 button.btn.btn-dark.butonCuMargini {
