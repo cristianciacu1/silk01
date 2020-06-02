@@ -26,7 +26,7 @@ a{
     display: none !important;
 }
 
-input.form-control {
+input #form1 {
     background-color: #343a40 !important;
     border: none !important;
     color: #f8f9fa !important;
