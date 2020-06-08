@@ -2,7 +2,126 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@{
+    Layout = null;
+}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - silk</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/Index.css" />
+    <link href="~/css/cristi.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark box-shadow mb-3" style="background-color: #302c2c">
+            <div class="container">
+                <div class="nav navbar-nav navbar-center">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><span style="color: #FACB0C">$</span>ilkresell</a>
+                </div>
+                <button class="aboutButton" onclick="document.getElementById('about').scrollIntoView();">Afla mai multe despre noi</button>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex">
+                    <ul class="navbar-nav ml-auto">
+                        <partial name="_LoginPartial" />
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="top">
+        <div class="container">
+            <div class="middle-button">
+                <button class="buyButton">Buy or sell - All styles</button>
+            </div>
+            <p class="underText"><mark>...or just yours:</mark></p>
+        </div>
+
+        <table class="category" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr class="categoryName">
+                    <th class="categoryText" style="background-color: white">
+                        Hype, Designer <br /> and Luxury
+                    </th>
+
+                    <th class="categoryText" style="background-color: gray">
+                        Elegance and Fashion
+                    </th>
+
+                    <th class="categoryText" style="background-color: black; color: white">
+                        Vintage
+                    </th>
+
+                    <th class="categoryText" style="background-color: white">
+                        Casual, Streetwear <br /> and Sports
+                    </th>
+
+                    <th class="categoryText" style="background-color: #d089bd">
+                        Custom Designed
+                    </th>
+                </tr>
+                <tr class="categoryImage">
+                    <td>
+                        <img src="~/Images/hype.png" />
+                    </td>
+
+                    <td>
+                        <img src="~/Images/elegance.png" />
+                    </td>
+
+                    <td>
+                        <img src="~/Images/vintage.png" />
+                    </td>
+
+                    <td>
+                        <img src="~/Images/casual.png" />
+                    </td>
+
+                    <td>
+                        <img src="~/Images/custom.png" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="about">
+        <h1 style="color: #FACB0C">Despre noi</h1>
+        <table class="aboutInformation">
+            <tbody>
+                <tr>
+                    <th>
+                        Ce este <span style="color: #FACB0C">$</span>ilkResell
+                    </th>
+
+                    <th>
+                        De ce sa cumperi de aici?
+                    </th>
+
+                    <th>
+                        De ce sa vinzi aici?
+                    </th>
+
+                    <th>
+                        Daca nu vrei sa citesti atat
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="returnTop">
+        <button class="topButton" onclick="document.getElementById('top').scrollIntoView();">Back to top</button>
+    </div>
+    <footer class="footer text-muted" style="background-color: #302c2c">
+        <div class="container">
+            &copy; 2020 - silk - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+</body>
