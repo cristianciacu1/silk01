@@ -23,7 +23,7 @@ namespace silk.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Browse()
         {
             return View();
         }

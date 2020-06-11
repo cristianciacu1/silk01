@@ -9,7 +9,6 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - silk</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/Index.css" />
     <link href="~/css/cristi.css" rel="stylesheet" />
@@ -22,7 +21,6 @@
                 <div class="nav navbar-nav navbar-center">
                     <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><span style="color: #FACB0C">$</span>ilkresell</a>
                 </div>
-                <button class="aboutButton" onclick="document.getElementById('about').scrollIntoView();">Afla mai multe despre noi</button>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -36,84 +34,62 @@
         </nav>
     </header>
 
-    <div id="top">
-        <div class="container">
-            <div class="middle-button">
-                <button class="buyButton">Buy or sell - All styles</button>
-            </div>
-            <p class="underText"><mark>...or just yours:</mark></p>
+    <div class="container" id="top">
+        <div class="middle-button">
+            <button class="buyButton">Buy or sell - All styles</button>
         </div>
-
-        <table class="category" cellspacing="0" cellpadding="0">
-            <tbody>
-                <tr class="categoryName">
-                    <th class="categoryText" style="background-color: white">
-                        Hype, Designer <br /> and Luxury
-                    </th>
-
-                    <th class="categoryText" style="background-color: gray">
-                        Elegance and Fashion
-                    </th>
-
-                    <th class="categoryText" style="background-color: black; color: white">
-                        Vintage
-                    </th>
-
-                    <th class="categoryText" style="background-color: white">
-                        Casual, Streetwear <br /> and Sports
-                    </th>
-
-                    <th class="categoryText" style="background-color: #d089bd">
-                        Custom Designed
-                    </th>
-                </tr>
-                <tr class="categoryImage">
-                    <td>
-                        <img src="~/Images/hype.png" />
-                    </td>
-
-                    <td>
-                        <img src="~/Images/elegance.png" />
-                    </td>
-
-                    <td>
-                        <img src="~/Images/vintage.png" />
-                    </td>
-
-                    <td>
-                        <img src="~/Images/casual.png" />
-                    </td>
-
-                    <td>
-                        <img src="~/Images/custom.png" />
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <p class="underText"><mark>...or just yours:</mark></p>
     </div>
-    <div id="about">
-        <h1 style="color: #FACB0C">Despre noi</h1>
-        <table class="aboutInformation">
-            <tbody>
-                <tr>
-                    <th>
-                        Ce este <span style="color: #FACB0C">$</span>ilkResell
-                    </th>
 
-                    <th>
-                        De ce sa cumperi de aici?
-                    </th>
+    <div class="container-fluid">
+        <div class="row no-gutters">
+            <div class="col-sm" align="center" style="background-color: white;">
+                <span style="font-size: 1.3em;">Hype, Designer and Luxury </span>
+                <img src="~/Images/hype.png" />
+            </div>
 
-                    <th>
-                        De ce sa vinzi aici?
-                    </th>
+            <div class="col-sm" align="center" style="background-color: gray">
+                <span style="font-size: 1.3em;">Elegance and Fashion </span>
+                <img src="~/Images/elegance.png" />
+            </div>
 
-                    <th>
-                        Daca nu vrei sa citesti atat
-                    </th>
-                </tr>
-            </tbody>
-        </table>
+            <div class="col-sm" align="center" style="background-color: black">
+                <span style="font-size: 1.3em; color: white;">Vintage</span>
+                <img src="~/Images/vintage.png" />
+            </div>
+
+            <div class="col-sm" align="center" style="background-color: white">
+                <span style="font-size: 1.3em;">Casual Streetwear and Sports </span>
+                <img src="~/Images/casual.png" />
+            </div>
+
+            <div class="col-sm" align="center" style="background-color: lightpink">
+                <span style="font-size: 1.3em;">Custom Designed</span>
+                <img src="~/Images/custom.png" />
+            </div>
+        </div>
+    </div>
+
+    <h1>About us</h1>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm m-3" align="center" style="background-color: white; border-radius: 20px; border: 3px solid black; height: 500px;">
+                Ce e <span style="color: #FACB0C">$</span>ilkresell?
+            </div>
+
+            <div class="col-sm m-3" align="center" style="background-color: white; border-radius: 20px; border: 3px solid black; height: 500px;">
+                De ce sa cumperi aici
+            </div>
+
+            <div class="col-sm m-3" align="center" style="background-color: white; border-radius: 20px; border: 3px solid black; height: 500px;">
+                De ce sa vinzi aici
+            </div>
+
+            <div class="col-sm m-3" align="center" style="background-color: white; border-radius: 20px; border: 3px solid black; height: 500px;">
+                Daca nu ai chef sa citesti atat
+            </div>
+        </div>
     </div>
 
     <div class="returnTop">
