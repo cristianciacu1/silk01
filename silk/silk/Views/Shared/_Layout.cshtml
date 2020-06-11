@@ -10,16 +10,24 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3" style="background-color: #302c2c">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
             <div class="container">
-                <a style="color: white" navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><span style="color: #FACB0C">$</span>ilkresell</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><span style="color: #FACB0C">$</span>ilkresell</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex">
                     <ul class="navbar-nav ml-auto">
-                        <partial name="_LoginPartial" />
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <button type="button" class="btn btn-dark nav-link"><a class="text-light noHover" asp-area="" asp-controller="Home" asp-action="Index">Acasă</a></button>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn btn-dark nav-link"><a class="text-light noHover" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></button>
+                            </li>
+                            <partial name="_LoginPartial" />
+                        </ul>
                     </ul>
                 </div>
             </div>
@@ -31,7 +39,7 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted" style="background-color: #302c2c">
+    <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2020 - SilkResell - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>

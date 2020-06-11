@@ -13,41 +13,54 @@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark box-shadow noMarginBottom">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><span style="color: #FACB0C">$</span>ilkresell</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex">
                     <ul class="navbar-nav ml-auto">
                         <ul class="navbar-nav flex-grow-1">
-                            <li class="nav-item d-block d-sm-none">
+
+                            <li class="nav-item d-block d-sm-none d-inline-block">
                                 @* Sa se vada pe telefoane *@
                                 @* Search - trebuie bara d aia de cautare*@
-                                <a class="nav-link text-light noHover" asp-area="Identity" asp-page="/Account/Register" role="button">
+                                <a class="nav-link text-light noHover paddingRight" asp-page="/Search" role="button">
                                     <img src="~/Icons/search.png" alt="Cart" style="width: 22px; height: 22px" />
                                 </a>
                             </li>
                             @* Sa nu se vada pe telefoane - sa se vada pe desktop*@
                             @* Search - trebuie bara d aia de cautare*@
                             <li class="nav-item d-none d-sm-block form-inline">
-                                <form class="form-inline black" name="formPC" id="form1">
+                                <form class="form-inline" name="formPC" id="form1">
                                     <a onclick="openSearch()" class="nav-link text-light noHover" role="button">
                                         <img src="~/Icons/search.png" alt="Cart" style="width: 22px; height: 22px" />
                                     </a>
                                     <section class="d-none" id="sectiune1">
-                                        <input name="search" class="form-control mr-sm-2" style="background-color: #343a40" type="search" placeholder="Search" aria-label="Search">
+                                        <input name="search" class="form-control mr-sm-2 black" style="background-color: #343a40" type="search" placeholder="Search" aria-label="Search">
                                     </section>
                                 </form>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light noHover" asp-area="Identity" asp-page="/Account/Register" role="button">
+
+
+                            <li class="nav-item d-block d-sm-none d-inline-block paddingRight"> @* mobil *@
+                                <a class="nav-link text-light noHover" asp-page="/Cart" role="button">
                                     <img src="~/Icons/supermarket.png" alt="Cart" style="width: 22px; height: 22px" />
                                 </a>
                             </li>
+                            <li class="nav-item d-none d-sm-block dropdown">@* desktop *@
+                                <a class="nav-link dropdown-toggle text-dark noHover" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="~/Icons/supermarket.png" alt="Cart" style="width: 22px; height: 22px" />
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown1">
+                                    <div class="container">
+                                        <h5 class="dropdown-item-text">Cosul tau</h5>
+                                        <div class="dropdown-divider"></div>
+                                        <h5 class="dropdown-item-text">Este gol :(</h5>
+                                    </div>
+                                </div>
+                            </li>
+
+
                         </ul>
+
                         <partial name="_LoginPartial1" />
+                    
                     </ul>
-                </div>
             </div>
         </nav>
     </header>
