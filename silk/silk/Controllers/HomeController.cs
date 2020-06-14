@@ -23,6 +23,8 @@ namespace silk.Controllers
             return View();
         }
 
+
+        [HttpGet, Route("Browse")]
         public IActionResult Browse()
         {
             return View();
