@@ -16,7 +16,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark box-shadow mb-3" style="background-color: #302c2c">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark box-shadow mb-3" style="background-color: #302c2c">
             <div class="container">
                 <div class="nav navbar-nav navbar-center">
                     <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><span style="color: #FACB0C">$</span>ilkresell</a>
@@ -36,7 +36,7 @@
 
     <div class="container" id="top">
         <div class="middle-button">
-            <button class="buyButton">Buy or sell - All styles</button>
+            <a class="buyButton" asp-area="" asp-controller="Shop" asp-action="Index">Buy or sell - All styles</a>
         </div>
         <p class="underText"><mark>...or just yours:</mark></p>
     </div>
@@ -71,23 +71,23 @@
     </div>
 
     <h1>About us</h1>
-
+    
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm m-3" align="center" style="background-color: white; border-radius: 20px; border: 3px solid black; height: 500px;">
-                Ce e <span style="color: #FACB0C">$</span>ilkresell?
+                What is <span style="color: #FACB0C">$</span>ilkresell?
             </div>
 
             <div class="col-sm m-3" align="center" style="background-color: white; border-radius: 20px; border: 3px solid black; height: 500px;">
-                De ce sa cumperi aici
+                Why buy here?
             </div>
 
             <div class="col-sm m-3" align="center" style="background-color: white; border-radius: 20px; border: 3px solid black; height: 500px;">
-                De ce sa vinzi aici
+                Why sell here?
             </div>
 
             <div class="col-sm m-3" align="center" style="background-color: white; border-radius: 20px; border: 3px solid black; height: 500px;">
-                Daca nu ai chef sa citesti atat
+                For short
             </div>
         </div>
     </div>
@@ -97,7 +97,11 @@
     </div>
     <footer class="footer text-muted" style="background-color: #302c2c">
         <div class="container">
-            &copy; 2020 - silk - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2020 - SilkResell
         </div>
     </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
 </body>
