@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "silk", "silk\silk.csproj", "{F70D89D4-C1E1-44B3-B205-222675074054}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Silk.Web", "Silk.Web\Silk.Web.csproj", "{F70D89D4-C1E1-44B3-B205-222675074054}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Silk.Data", "Silk.Data\Silk.Data.csproj", "{9BC524C8-3EBB-40E7-8578-C32E956AA910}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F70D89D4-C1E1-44B3-B205-222675074054}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F70D89D4-C1E1-44B3-B205-222675074054}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F70D89D4-C1E1-44B3-B205-222675074054}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BC524C8-3EBB-40E7-8578-C32E956AA910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BC524C8-3EBB-40E7-8578-C32E956AA910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BC524C8-3EBB-40E7-8578-C32E956AA910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BC524C8-3EBB-40E7-8578-C32E956AA910}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
