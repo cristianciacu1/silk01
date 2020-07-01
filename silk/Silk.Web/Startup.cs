@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Silk.Data;
 using Silk.Web.Data;
 
 namespace Silk.Web
@@ -28,6 +29,10 @@ namespace Silk.Web
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddDbContext<SilkContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("SilkConnection")));
 
         }
 
