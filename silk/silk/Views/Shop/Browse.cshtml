@@ -37,10 +37,30 @@
     </div>
 </nav>
 
-@* Left side column *@
 
-<div>
-    <div class="col-md-2 d-none d-md-block" style="background-color:black; height: 100vh;">
+@* Left side column, only on desktops *@
 
+<div class="wrapper d-none d-md-block">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2" style="background-color:black; height: 100vh;">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@* Mobile first *@
+
+<div class="wrapper d-block d-sm-none">
+    <div class="container-fluid">
+        <div class="row">
+            @{ 
+                for(var i=0; i<5; i++)
+                {
+                    <partial name="ItemCard" />
+                }
+            }
+        </div>
     </div>
 </div>

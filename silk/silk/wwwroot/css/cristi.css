@@ -22,7 +22,11 @@ a{
     cursor: pointer !important;
 }
 
-.dropdown-toggle::after{
+.offsetMinusNavbarTitle{
+    margin-left: -2rem !important;
+}
+
+.dropdown-toggle::after {
     display: none !important;
 }
 
@@ -41,12 +45,12 @@ button.btn.btn-dark.butonCuMargini {
     margin-top: 15px !important;
 }
 
-.navbar-nav{
+.navbar-nav.CustomFlexDirection{
     flex-direction: row!important;
 }
 
 .paddingRight{
-    padding-right: 10px !important;
+    padding-right: 1rem !important;
 }
 
 @media(min-width: 576px) {
@@ -79,4 +83,213 @@ button.btn.btn-dark.butonCuMargini {
         padding-left: 30px !important;
         padding-right: 30px !important;
     }
+}
+
+#sidebar {
+    width: 85vw;
+    position: fixed;
+    top: 0;
+    left: -85vw;
+    height: 100vh;
+    z-index: 999;
+    background: #343a40 !important;
+    color: #fff;
+    transition: all 0.3s;
+    overflow-y: scroll;
+}
+
+#sidebar.active {
+    left: 0;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+#dismiss {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: #343a40 !important;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#dismiss:hover {
+    background: #fff;
+    color: #7386D5;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #30353b;
+}
+
+#sidebar .sidebar-header h3{
+    font-size: 2rem !important;
+}
+
+#sidebar .sidebar-header.initial {
+    background-image: url('../Images/albastru.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#sidebar .sidebar-header.second {
+    background-image: url('~/Images/mov.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#sidebar .sidebar-header.third {
+    background-image: url('~/Images/portocaliu.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#sidebar .sidebar-header.fourth {
+    background-image: url('~/Images/turcoaz.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+    #sidebar #sidebar-header2 {
+        padding: 20px;
+        background: #30353b;
+    }
+
+    #sidebar #sidebar-header2 h3 {
+        font-size: 2rem !important;
+    }
+
+    #sidebar #sidebar-header2.initial {
+        background-image: url('../Images/albastru.jpg') !important;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    #sidebar #sidebar-header2.second {
+        background-image: url('../Images/mov.jpg') !important;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    #sidebar #sidebar-header2.third {
+        background-image: url('../Images/portocaliu.jpg') !important;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    #sidebar #sidebar-header2.fourth {
+        background-image: url('~/Images/turcoaz.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 20px;
+    font-size: 1.1em;
+    display: block;
+    color: #fff;
+}
+
+#sidebar ul li.active {
+    padding-top: 10px;
+    font-size: 1.1em;
+    display: block;
+    color: rgba(255,255,255,.5);
+    background-color: #30353b;
+    box-shadow: none !important;
+}
+
+#sidebar ul li a:hover {
+    color: #fff;
+    background: #30353b;
+}
+
+#sidebar ul li.active > a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #30353b;
+    -webkit-box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.75);
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: #fff;
+    color: #7386D5;
+}
+
+a.article,
+a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+h5.customCarouselItems {
+    color: #fff;
+    text-decoration: underline;
 }

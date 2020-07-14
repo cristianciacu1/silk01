@@ -24,5 +24,11 @@ namespace silk.Controllers
         {
             return View();
         }
+
+        [HttpGet, Route("Search")]
+        public IActionResult Search()
+        {
+            return View();
+        }
     }
 }
