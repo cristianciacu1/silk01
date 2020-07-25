@@ -1,6 +1,9 @@
-﻿@{
+﻿@model silk.Models.People
+
+@{
     ViewData["Title"] = "Browse";
     Layout = "~/Views/Shared/_Layout1.cshtml";
+    var Title = "Browse items";
 }
 
 @* TO DOS:
@@ -38,13 +41,30 @@
 </nav>
 
 
-@* Left side column, only on desktops *@
+@* CONTENT *@
 
-<div class="wrapper d-none d-md-block">
+@* only on desktops *@
+
+<div class="d-none d-lg-block">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-2" style="background-color:black; height: 100vh;">
-
+            <div class="col-md-2">
+                <div style="height: 100vh"></div>
+            </div>
+            <div class="col-md-10">
+                <div class="container-fluid">
+                    <h1 class="text-left displayInline" style="padding-top: 25px;margin-bottom: 0;">@Title</h1>
+                    <div id="buttonFinder" class="displayInline float-right marginTop15px">
+                        <button type="button" class="btn custom2 btn-secondary btn-lg displayInline" data-toggle="modal" data-target="#filtersModal">Filters</button>
+                    </div>
+                    <partial name="FiltersModal" />
+                    <div class="row" style="margin-top: 10px">
+                        @foreach (var item in Model.people)
+                        {
+                            <partial name="ItemCard" model="item" />
+                        }
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -52,15 +72,18 @@
 
 @* Mobile first *@
 
-<div class="wrapper d-block d-sm-none">
+<div class="d-block d-lg-none">
     <div class="container-fluid">
+        <h1 class="text-center" style="padding-top: 25px;margin-bottom: 0;">@Title</h1>
         <div class="row">
-            @{ 
-                for(var i=0; i<5; i++)
-                {
-                    <partial name="ItemCard" />
-                }
+            @foreach (var item in Model.people)
+            {
+                <partial name="ItemCard" model="item" />
             }
         </div>
+        <div id="buttonFinder" class="buttonFixed activeButton">
+            <button type="button" class="btn custom2 btn-secondary btn-lg" data-toggle="modal" data-target="#exampleModal">Filters</button>
+        </div>
+        <partial name="FiltersModalMobile" />
     </div>
 </div>

@@ -90,7 +90,7 @@ button.btn.btn-dark.butonCuMargini {
     position: fixed;
     top: 0;
     left: -85vw;
-    height: 100vh;
+    height: 100%;
     z-index: 999;
     background: #343a40 !important;
     color: #fff;
@@ -292,4 +292,115 @@ a.article:hover {
 h5.customCarouselItems {
     color: #fff;
     text-decoration: underline;
+}
+
+.col-6.custom{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 7.5px !important;
+    padding-bottom: 7.5px !important;
+}
+
+.buttonFixed {
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.btn-secondary {
+    color: black !important;
+    background-color: #FACB0C !important;
+    border-color: #FACB0C !important;
+    border-radius: 25px;
+    font-size: 
+}
+
+.btn.custom2 {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+}
+
+@media(max-width: 575px){
+    .btn.custom2{
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+
+.activeButton {
+    -webkit-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+    -o-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+    transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    display: block;
+}
+
+.inactiveButton {
+    -webkit-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+    -o-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+    transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    display: none;
+}
+
+.fixedElement{
+    margin-top: 30px;
+}
+
+.navbar {
+    font-weight: 400 !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+.bg-dark {
+    background-color: #343a40 !important;
+}
+
+.rating li, .side-nav .social li{
+    display: inline-block;
+}
+
+.displayInline{
+    display: inline-block !important;
+}
+
+.stickToRight{
+    right: 0 !important;
+}
+
+.modal-dialog.custom {
+    margin: 0 !important;
+    margin-left: auto !important;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog.custom {
+        margin: 0 !important;
+        margin-left: auto !important;
+    }
+}
+
+.noPaddingRight{
+    padding-right: 0 !important;
+}
+
+.noUi-horizontal .noUi-tooltip {
+    bottom: -40px !important;
+}
+
+.noUi-tooltip {
+    border: 0 !important;
 }

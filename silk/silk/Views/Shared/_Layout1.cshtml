@@ -4,11 +4,22 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Silkresell</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="~/css/site.css" />
-    <link href="~/css/cristi.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="~/css/itemCard.css" />
+    <link rel="stylesheet" href="~/css/filtersTab.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- noUiSlider css -->
+    <link rel="stylesheet" href="~/css/nouislider.min.css" />
+
+    <link href="~/css/cristi.css" rel="stylesheet" />
+
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
@@ -106,34 +117,8 @@
                     </div>
                 </div>
             </div>
-
-            @*<ul class="list-unstyled components" style="padding-top: 20px;">
-                <li>
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Haine</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li class="active">
-                            <a href="#">Tricouri</a>
-                        </li>
-                        <li class="active">
-                            <a href="#">Hanorace</a>
-                        </li>
-                        <li class="active">
-                            <a href="#">Pantaloni scurti</a>
-                        </li>
-                        <li class="active">
-                            <a href="#">Pantaloni lungi</a>
-                        </li>
-                        <li class="active">
-                            <a href="#">Accesorii</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Incaltaminte</a>
-                </li>
-            </ul>*@
-        <div id="content"></div>
-</nav>
+            <div id="content"></div>
+        </nav>
 
     </header>
     <div>
@@ -148,12 +133,27 @@
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+    <!-- noUiSlider js -->
+    <script type="text/javascript" src="~/js/nouislider.min.js"></script>
+    <!-- wNumb script for noUiSlider -->
+    <script type="text/javascript" src="~/js/wNumb.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    @* habar n am ce face asta *@
     <script>
         function openSearch() {
             var element = document.getElementById("sectiune1");
@@ -174,6 +174,7 @@
             }
         }
     </script>
+    @* pentru sidebar *@
     <script type="text/javascript">
         $(document).ready(function () {
             $("#sidebar").mCustomScrollbar({
@@ -197,6 +198,7 @@
             });
         });
     </script>
+    @* carouselul din sidebar *@
     <script type="text/javascript">
         $('.carouselCustom').slick({
             centerMode: true,
@@ -217,14 +219,14 @@
                     settings: {
                         arrows: false,
                         centerMode: true,
-                        centerPadding: '50px',
+                        centerPadding: '60px',
                         slidesToShow: 1
                     }
                 }
             ]
         });
     </script>
-    @* script pentru navbar-ul de pe pagina browse (mobile)  *@
+    @* tot pentru carouselu din sidebar, aici schimb culorile alea afurisite  *@
     <script>
 
         var render = function (template, node) {
@@ -331,8 +333,102 @@
         };
 
         render(template, document.querySelector('#content'));
-        
+
     </script>
+
+    @* cards *@
+    <script>
+        $('.buy').click(function () {
+            $('.bottom').addClass("clicked");
+        });
+
+        $('.remove').click(function () {
+            $('.bottom').removeClass("clicked");
+        });
+    </script>
+
+    @* ca sa dispara butonul de filtre din pagina de browse, mobile only *@
+
+    <script type="text/javascript">
+        $(window).scroll(function () {
+            var buton = document.getElementById("buttonFinder");
+            if (buton !== null) {
+                if ($(window).scrollTop() + $(window).height() >= $(document).height() - 50) {
+                    buton.classList.remove('activeButton');
+                    buton.classList.add('inactiveButton');
+                }
+                else {
+                    buton.classList.remove('inactiveButton');
+                    buton.classList.add('activeButton');
+                }
+            }
+        });
+    </script>
+
+    @* Script pentru a face coloana din stanga de pe pagina de browse fixed top after a specific amount of scrolling... am i clear? *@
+
+    @*<script type="text/javascript">
+            var fixmeTop = $('.fixedElement').offset().top;
+            $(window).scroll(function () {
+                var currentScroll = $(window).scrollTop();
+                if (currentScroll >= fixmeTop) {
+                    $('.fixedElement').css({
+                        position: 'fixed',
+                        top: '0'
+                    });
+                } else {
+                    $('.fixedElement').css({
+                        position: 'static'
+                    });
+                }
+            });
+        </script>*@
+
+    <script>
+        $('#multi').mdbRange({
+            single: {
+                active: true,
+                multi: {
+                    active: true,
+                    rangeLength: 1
+                },
+            }
+        });
+    </script>
+
+    @* script pentru price slider DESKTOP *@
+
+    <script>
+        var stepsSlider = document.getElementById('slider-handles');
+
+        noUiSlider.create(stepsSlider, {
+            start: [20, 80],
+            connect: true,
+            tooltips: [true, wNumb({ decimals: 1 })],
+            range: {
+                'min': [0],
+                'max': 200
+            }
+        });
+
+    </script>
+
+    @* script pentru price slider MOBILE *@
+
+    <script>
+        var stepsSlider = document.getElementById('slider-handlesMobile');
+
+        noUiSlider.create(stepsSlider, {
+            start: [20, 80],
+            connect: true,
+            tooltips: [true, wNumb({ decimals: 1 })],
+            range: {
+                'min': [0],
+                'max': 200
+            }
+        });
+    </script>
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>

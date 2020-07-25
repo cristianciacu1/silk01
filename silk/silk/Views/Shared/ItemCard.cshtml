@@ -1,10 +1,90 @@
-﻿<div class="col-6">
-    <div class="card">
-        <img class="card-img-top" src="~/Images/albastru.jpg" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+﻿@model Person
+
+@* MOBILE *@
+
+<div class="col-6 custom d-block d-sm-none">
+    <div class="page-inner">
+        <div class="el-wrapper">
+            <div class="box-up">
+                <div class="miniBox">
+                    <img class="img" src=@Model.picture alt="">
+                </div>
+                <div class="img-info">
+                    <div class="info-inner">
+                        <span class="p-name">@Model.name</span>
+                        <span class="p-company">Yeezy</span>
+                    </div>
+                    <div class="a-size">Condition: <span class="size">@Model.condition</span></div>
+                    <br />
+                    <div class="a-size2">
+                        Available sizes :
+                        @foreach (var item in Model.sizes)
+                        {
+                            <span class="size">@item, </span>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div class="box-down">
+                <div class="h-bg">
+                    <div class="h-bg-inner"></div>
+                </div>
+                <a class="cart" asp-area="" asp-controller="Shop" asp-action="ItemDetails">
+                    <span class="price">@Model.price</span>
+                    <span class="add-to-cart">
+                        <span class="txt">View details</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* DESKTOP *@
+
+<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-6 custom d-none d-sm-block">
+    <div class="page-inner">
+        <div class="el-wrapper">
+            <div class="box-up">
+                <div class="miniBox">
+                    <img class="img" src=@Model.picture alt="">
+                </div>
+                <div class="img-info">
+                    <div class="info-inner">
+                        <span class="p-name">@Model.name</span>
+                        <span class="p-company">Yeezy</span>
+                    </div>
+                    <div class="a-size">Condition: <span class="size">@Model.condition</span></div>
+                    <br />
+                    <div class="a-size2">
+                        Available sizes :
+                        @foreach (var item in Model.sizes)
+                        {
+                            if (item == Model.sizes.Last())
+                            {
+                                <span class="size">@item </span>
+                            }
+                            else
+                            {
+                                <span class="size">@item, </span>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div class="box-down">
+                <div class="h-bg">
+                    <div class="h-bg-inner"></div>
+                </div>
+                <a class="cart" asp-area="" asp-controller="Shop" asp-action="ItemDetails">
+                    <span class="price">@Model.price</span>
+                    <span class="add-to-cart">
+                        <span class="txt">View details</span>
+                    </span>
+                </a>
+            </div>
         </div>
     </div>
 </div>

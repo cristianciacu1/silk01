@@ -1,0 +1,27 @@
+﻿.marginTop30px{
+    margin-top: 30px !important;
+}
+
+.marginTop20px {
+    margin-top: 20px !important;
+}
+
+.marginTop15px {
+    margin-top: 15px !important;
+}
+
+.marginBottom40px{
+    margin-bottom: 40px !important;
+}
+
+.filtersTitle {
+    font-size: 18px;
+    color: #999;
+    margin: 25px 0;
+}
+
+.component:not(:first-of-type) {
+    border-top: 0.5px solid #ddd;
+    margin-top: 25px;
+}
+
