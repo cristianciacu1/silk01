@@ -1,0 +1,9 @@
+﻿body {
+    background-image: url(../Images/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    background-size: cover;
+}
+
+

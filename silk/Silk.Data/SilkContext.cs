@@ -10,6 +10,9 @@ namespace Silk.Data
     {
         public DbSet<Client> Clients { get; set; }
         public DbSet<ClientAdress> ClientAdresses { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductOrder> ProductOrders { get; set; }
+        public DbSet<Order> Orders { get; set; }
 
         public SilkContext(DbContextOptions<SilkContext> options) : base(options)
         {
